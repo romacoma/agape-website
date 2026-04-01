@@ -3,23 +3,38 @@
 /* Services Grid */
 .rehab-service-card {
   background-color: var(--white);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--space-xl);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition);
+  transition: all 0.3s var(--ease-out);
   height: 100%;
-  border: 1px solid var(--neutral-100);
+  border: 1px solid rgba(74, 144, 226, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .rehab-service-card:hover {
-  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
 }
 
 .rehab-icon {
-  width: 48px;
-  height: 48px;
-  color: var(--primary);
-  margin-bottom: var(--space-md);
+  width: 56px;
+  height: 56px;
+  color: var(--accent);
+  margin-bottom: var(--space-lg);
+  padding: 12px;
+  background-color: #f0f7ff;
+  border-radius: var(--radius-md);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.rehab-service-card:hover .rehab-icon {
+  transform: scale(1.1) rotate(5deg);
+  background-color: var(--accent);
+  color: var(--white);
 }
 
 .rehab-icon svg {
@@ -48,7 +63,7 @@
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  background-color: var(--secondary);
+  background-color: var(--accent);
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -100,10 +115,17 @@
 }
 
 .condition-item {
-  padding: var(--space-md);
-  background-color: var(--white);
-  border-left: 3px solid var(--accent);
-  box-shadow: var(--shadow-sm);
+  padding: var(--space-sm) var(--space-md);
+  background-color: #f8fafc;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
   font-weight: 600;
   color: var(--primary-dark);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-xs);
+  transition: background-color 0.2s ease;
+}
+
+.condition-item:hover {
+  background-color: var(--white);
 }
