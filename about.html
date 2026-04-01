@@ -10,15 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components/buttons.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <link rel="stylesheet" href="/css/components/hero.css">
-  <link rel="stylesheet" href="/css/pages/about.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/pages/about.css">
 
   <link rel="alternate" hreflang="uk" href="https://www.agapeukraine.com/about.html">
   <link rel="alternate" hreflang="en" href="https://www.agapeukraine.com/en/about.html">
@@ -28,11 +28,11 @@
   <div id="site-header" class="header--scrolled"></div>
 
   <main style="padding-top: 80px;">
-    <!-- Page Header -->
-    <section class="section bg-light text-center">
+    <!-- Page Header (Hero style) -->
+    <section class="section bg-primary text-center" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); padding: var(--space-2xl) 0;">
       <div class="container animate-on-scroll">
-        <h1 class="mb-sm">Про нас</h1>
-        <p class="text-neutral-600 mb-0" style="font-size: 1.25rem;">Історія, місія та команда «Агапе Україна»</p>
+        <h1 class="mb-sm" style="color: var(--white); font-size: 3.5rem;">Про нас</h1>
+        <p style="font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Історія, місія та професійна команда «Агапе Україна»</p>
       </div>
     </section>
 
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="about-image-col">
-            <img src="/assets/images/placeholder.svg" alt="Будівля Агапе" class="w-100" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dad99901?auto=format&fit=crop&q=80&w=1000" alt="Процес реабілітації" class="w-100" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
           </div>
         </div>
       </div>
@@ -135,37 +135,37 @@
           <!-- Team Member 1 -->
           <div class="team-member">
             <div class="team-image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Лікар 1" class="team-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=400" alt="Фізичний терапевт" class="team-image" loading="lazy">
             </div>
-            <h4 class="team-name">Іван Іванов</h4>
-            <div class="team-role">Головний фізичний терапевт</div>
+            <h4 class="team-name">Василь Гузар</h4>
+            <div class="team-role">Фізичний терапевт</div>
           </div>
           
           <!-- Team Member 2 -->
           <div class="team-member">
             <div class="team-image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Лікар 2" class="team-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300&h=400" alt="Ерготерапевт" class="team-image" loading="lazy">
             </div>
-            <h4 class="team-name">Олена Петрівна</h4>
+            <h4 class="team-name">Світлана Коваль</h4>
             <div class="team-role">Ерготерапевт</div>
           </div>
           
           <!-- Team Member 3 -->
           <div class="team-member">
             <div class="team-image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Лікар 3" class="team-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71f1e628b3?auto=format&fit=crop&q=80&w=300&h=400" alt="Медичний персонал" class="team-image" loading="lazy">
             </div>
-            <h4 class="team-name">Марія Сергіївна</h4>
-            <div class="team-role">Медичний директор</div>
+            <h4 class="team-name">Наталія Мельник</h4>
+            <div class="team-role">Медична сестра</div>
           </div>
           
           <!-- Team Member 4 -->
           <div class="team-member">
             <div class="team-image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Лікар 4" class="team-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300&h=400" alt="Керівник" class="team-image" loading="lazy">
             </div>
-            <h4 class="team-name">Олег Вікторович</h4>
-            <div class="team-role">Керівник центру</div>
+            <h4 class="team-name">Олександр Гаврилюк</h4>
+            <div class="team-role">Адміністрація</div>
           </div>
         </div>
         
@@ -188,6 +188,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
