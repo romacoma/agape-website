@@ -1,0 +1,85 @@
+/* Base styles and utilities */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--neutral-900);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); } /* 32px-48px */
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); } /* 28px-40px */
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); } /* 24px-32px */
+h4 { font-size: 1.5rem; font-weight: 600; } /* 24px */
+h5 { font-size: 1.25rem; font-weight: 600; } /* 20px */
+h6 { font-size: 1rem; font-weight: 600; } /* 16px */
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover, a:focus {
+  color: var(--primary-light);
+}
+
+/* Base list styles */
+ul:not([role="list"]), ol:not([role="list"]) {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-0 { margin-bottom: 0 !important; }
+.mt-0 { margin-top: 0 !important; }
+.mb-lg { margin-bottom: var(--space-lg) !important; }
+.mt-lg { margin-top: var(--space-lg) !important; }
+.mb-xl { margin-bottom: var(--space-xl) !important; }
+.mt-xl { margin-top: var(--space-xl) !important; }
+.mb-2xl { margin-bottom: var(--space-2xl) !important; }
+
+.section-padding { padding: var(--space-xl) 0; }
+.section-padding-large { padding: var(--space-2xl) 0; }
+
+.bg-light { background-color: var(--neutral-50); }
+.bg-dark { background-color: var(--primary-dark); color: var(--white); }
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6 {
+  color: var(--white);
+}
+
+img {
+  border-radius: var(--radius-sm);
+}

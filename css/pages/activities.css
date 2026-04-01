@@ -1,0 +1,137 @@
+/* Activities Pages CSS */
+
+/* Sub-page Specific Header */
+.activity-header {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  background-color: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+}
+
+.activity-header h1 {
+  color: var(--white);
+  margin-bottom: var(--space-md);
+}
+
+.activity-header p {
+  font-size: 1.25rem;
+  color: var(--neutral-100);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Activity Specific Content Blocks */
+.content-block {
+  margin-bottom: var(--space-2xl);
+}
+
+.content-block:last-child {
+  margin-bottom: 0;
+}
+
+.content-block h2 {
+  color: var(--primary-dark);
+  border-left: 4px solid var(--secondary);
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.content-block.text-center h2 {
+  border-left: none;
+  padding-left: 0;
+}
+
+.content-image-right,
+.content-image-left {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content-image-right {
+    grid-template-columns: 3fr 2fr;
+  }
+  
+  .content-image-left {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.content-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+/* Callouts / Highlights */
+.highlight-box {
+  background-color: var(--neutral-50);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-100);
+}
+
+.highlight-box h3 {
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+/* Studio Specific */
+.studio-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (min-width: 576px) {
+  .studio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .studio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.studio-item {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.studio-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+}
+
+.studio-item h4 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.studio-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  background-color: rgba(26, 79, 143, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.studio-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}

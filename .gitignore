@@ -1,0 +1,12 @@
+.tmp/
+*.tmp
+update_index.js
+update_index.py
+merge_index.js
+force_fix.js
+apply_redesign.py
+.gemini/
+.node-version
+node_modules/
+dist/
+.DS_Store

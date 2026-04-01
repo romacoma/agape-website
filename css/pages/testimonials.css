@@ -1,0 +1,43 @@
+/* Testimonials Page Styles */
+
+.testimonials-grid-all {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.testimonial-item {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid var(--neutral-100);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition);
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-quote {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-lg);
+}
+
+/* Page Specific Grid for more variety */
+@media (max-width: 992px) {
+  .testimonials-grid-all {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-grid-all {
+    grid-template-columns: 1fr;
+  }
+}

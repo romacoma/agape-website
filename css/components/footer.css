@@ -1,0 +1,133 @@
+/* Footer Styles */
+#site-footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding-top: var(--space-xl);
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.footer-logo .logo {
+  height: 60px;
+  width: auto;
+}
+
+.footer-col h4 {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.footer-nav ul[role="list"] {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px;
+  column-gap: 16px;
+}
+
+.footer-nav ul[role="list"] li {
+  margin-bottom: 0;
+}
+
+.footer-nav a {
+  color: var(--neutral-100);
+  font-family: var(--font-heading);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Contact List */
+.contact-list {
+  padding-left: 0 !important;
+}
+
+.contact-list li {
+  display: flex;
+  margin-bottom: var(--space-md);
+  align-items: flex-start;
+}
+
+.contact-icon {
+  margin-right: 12px;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.contact-list a, .contact-list span {
+  color: var(--neutral-100);
+}
+
+.contact-list a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.contact-hint {
+  color: var(--neutral-600);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+/* Partners Grid */
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.partners-grid a {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  color: var(--neutral-100);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.partners-grid a:hover {
+  background-color: var(--white);
+  color: var(--primary-dark);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-md);
+  text-align: center;
+  color: var(--neutral-600);
+  font-size: 14px;
+}

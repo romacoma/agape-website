@@ -1,0 +1,100 @@
+/* Contacts Page Styles */
+
+/* Map Section */
+.map-container {
+  width: 100%;
+  height: 400px;
+  background-color: var(--neutral-100);
+  margin-top: var(--space-xl);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Contact Info Display */
+.contact-info-card {
+  background-color: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  height: 100%;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: var(--space-lg);
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(26, 79, 143, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: var(--space-md);
+}
+
+.info-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.info-details h4 {
+  margin-bottom: var(--space-xs);
+  color: var(--neutral-900);
+}
+
+.info-details p, .info-details a {
+  color: var(--neutral-600);
+  font-size: 1.125rem;
+}
+
+.info-details a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Donation Blocks */
+.donate-block {
+  background-color: var(--neutral-50);
+  border: 1px solid var(--neutral-100);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.donate-block h3 {
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  display: inline-block;
+}
+
+.bank-details {
+  font-family: monospace;
+  font-size: 1.125rem;
+  background-color: var(--white);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--neutral-100);
+  color: var(--neutral-900);
+}
+
+.bank-details strong {
+  color: var(--primary);
+}

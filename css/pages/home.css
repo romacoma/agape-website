@@ -1,0 +1,105 @@
+/* Homepage Specific Styles */
+
+/* Services/Rehabilitation Preview */
+.service-icon-box {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition);
+  height: 100%;
+}
+
+.service-icon-box:hover {
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* About Preview */
+.about-preview-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure full image is seen without cropping */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+.about-text-col {
+  padding: 0 var(--space-lg);
+}
+
+.about-text-col h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem); /* Slightly smaller than global H2 for harmony */
+}
+
+.check-list {
+  padding-left: 0 !important;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: var(--primary-dark);
+  line-height: 1.3;
+}
+
+.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: var(--success);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+/* CTA Block */
+.cta-block {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+.cta-block h2 {
+  color: var(--white);
+}
+
+.cta-block .btn {
+  margin-top: var(--space-md);
+}
+
+.cta-phone {
+  margin-top: var(--space-md);
+  font-size: 1.125rem;
+  color: var(--neutral-100);
+}
+
+.cta-phone a {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.cta-phone a:hover {
+  text-decoration: underline;
+}
