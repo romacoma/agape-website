@@ -99,13 +99,15 @@ export function initHeader() {
 
   // Resolve language switcher links dynamically based on current page
   const langLinks = document.querySelectorAll('.lang-link:not(.active)');
-  const isEnPath = currentPath.startsWith('/en');
+  const isEnPath = currentPath.includes('/en/');
+  
   langLinks.forEach(link => {
     if (isEnPath) {
-      link.href = currentPath.replace('/en', '') || '/index.html';
+      // From EN subfolder to Root: target is one level up
+      link.href = '../index.html'; 
     } else {
-      const pathSuffix = currentPath === '/' ? '/index.html' : currentPath;
-      link.href = '/en' + (pathSuffix.startsWith('/') ? pathSuffix : '/' + pathSuffix);
+      // From Root to EN subfolder: target is in /en/
+      link.href = './en/index.html';
     }
   });
 }
