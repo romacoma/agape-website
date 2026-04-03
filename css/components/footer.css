@@ -15,6 +15,12 @@
   width: auto;
 }
 
+@media (max-width: 480px) {
+  .footer-logo .logo {
+    height: 45px;
+  }
+}
+
 .footer-col h4 {
   color: var(--white);
   font-size: 20px;
@@ -105,6 +111,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    justify-content: center;
+  }
 }
 
 .partners-grid a {

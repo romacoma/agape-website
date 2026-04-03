@@ -85,6 +85,8 @@ ul:not([role="list"]), ol:not([role="list"]) {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   border-radius: var(--radius-sm);
 }
 
