@@ -63,6 +63,10 @@ ul:not([role="list"]), ol:not([role="list"]) {
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.d-block { display: block !important; }
+.w-100 { width: 100% !important; }
+
 .mb-0 { margin-bottom: 0 !important; }
 .mt-0 { margin-top: 0 !important; }
 .mb-lg { margin-bottom: var(--space-lg) !important; }
@@ -82,4 +86,28 @@ ul:not([role="list"]), ol:not([role="list"]) {
 
 img {
   border-radius: var(--radius-sm);
+}
+
+/* Video Utilities */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  background: var(--neutral-100);
+}
+
+.video-wrapper iframe,
+.video-wrapper object,
+.video-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

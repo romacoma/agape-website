@@ -1,0 +1,139 @@
+/* WP-friendly Image Carousel (Using Native CSS Scroll Snapping) */
+
+.wp-friendly-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* The actual scrolling container */
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Momentum scrolling on iOS */
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  gap: var(--space-md);
+  padding-bottom: var(--space-md); /* Space for shadow/dots */
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual slides */
+.carousel-item {
+  flex: 0 0 100%; /* Show 1 item on mobile */
+  scroll-snap-align: center; /* Snap to center */
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 16/10;
+  display: block; /* For anchor tags */
+  cursor: zoom-in;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--primary-dark);
+  border: 1px solid var(--neutral-100);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all var(--transition);
+  opacity: 0.9;
+}
+
+.carousel-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  opacity: 1;
+}
+
+.carousel-btn.prev {
+  left: -22px;
+}
+
+.carousel-btn.next {
+  right: -22px;
+}
+
+/* Hide buttons on pure mobile devices where touch swipe is natural */
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
+}
+
+/* Pagination Dots */
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-md);
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--neutral-100);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition);
+}
+
+.carousel-dot.active {
+  background-color: var(--primary);
+  width: 24px;
+  border-radius: 12px;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - (var(--space-md) / 2)); /* Show 2 items */
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - (var(--space-md) / 2));
+    /* Alternative: show fewer, larger images */
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Single Item View Modifier */
+.carousel-single .carousel-item {
+  flex: 0 0 100% !important;
+  aspect-ratio: 4/3 !important;
+}
+
+@media (min-width: 1024px) {
+  .carousel-single .carousel-item {
+    aspect-ratio: 1/1 !important; /* Square or roughly matching text height */
+  }
+}

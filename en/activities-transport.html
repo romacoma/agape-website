@@ -10,14 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components/buttons.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <link rel="stylesheet" href="/css/pages/activities.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/components/gallery.css">
+  <link rel="stylesheet" href="../css/pages/activities.css">
 
   <link rel="alternate" hreflang="en" href="https://www.agapeukraine.com/en/activities-transport.html">
   <link rel="alternate" hreflang="uk" href="https://www.agapeukraine.com/activities-transport.html">
@@ -42,12 +43,60 @@
             <h2>Freedom of Movement</h2>
             <p class="mb-md">An integral and important part of a full life for a wheelchair user is the ability to move freely around the city and country.</p>
             <p>The Agape Ukraine organization has specially equipped minibuses with lifts at its disposal, which allow comfortable and safe trips to the hospital, railway station, retreats, or other events.</p>
-            
-            <div class="mt-lg">
-              <a href="/en/contacts.html" class="btn btn-primary">Book transport</a>
-            </div>
           </div>
-          <img src="/assets/images/placeholder.svg" alt="Agape Transport" class="content-img" loading="lazy">
+          <img src="../assets/images/placeholder.svg" alt="Agape Transport" class="content-img" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section bg-light pb-xl">
+      <div class="container animate-on-scroll">
+        <h2 class="text-center mb-xl">Our Vehicle Fleet</h2>
+        <div class="gallery-grid">
+          <!-- Item 1: Van side -->
+          <a href="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=400&h=400" alt="Specialized Van" loading="lazy">
+          </a>
+          <!-- Item 2: Lift mechanism -->
+          <a href="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=400&h=400" alt="Hydraulic Lift" loading="lazy">
+          </a>
+          <!-- Item 3: Interior -->
+          <a href="https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&q=80&w=400&h=400" alt="Interior" loading="lazy">
+          </a>
+          <!-- Item 4: Specialized equipment -->
+          <a href="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=400&h=400" alt="Equipment" loading="lazy">
+          </a>
+          <!-- Item 5: Driver/Service -->
+          <a href="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400&h=400" alt="Service" loading="lazy">
+          </a>
+          <!-- Item 6: On the road -->
+          <a href="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400&h=400" alt="On the road" loading="lazy">
+          </a>
+          <!-- Item 7: Detail -->
+          <a href="https://images.unsplash.com/photo-1532581133555-3ae60e7f7b3c?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1532581133555-3ae60e7f7b3c?auto=format&fit=crop&q=80&w=400&h=400" alt="Details" loading="lazy">
+          </a>
+          <!-- Item 8: Safe travel -->
+          <a href="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="transport">
+            <img src="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?auto=format&fit=crop&q=80&w=400&h=400" alt="Safety" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="section">
+      <div class="container animate-on-scroll">
+        <div class="content-block highlight-box text-center">
+          <h3>Need transport?</h3>
+          <p class="mb-md">To order an accessible taxi or for consultation regarding transport, please contact our team.</p>
+          <a href="/en/contacts.html" class="btn btn-primary">Order Transport</a>
         </div>
       </div>
     </section>
@@ -55,6 +104,6 @@
   </main>
 
   <div id="site-footer"></div>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>

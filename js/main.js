@@ -25,11 +25,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   if (pageType === 'rehabilitation' || pageType === 'activities' || pageType === 'gallery') {
     // Dynamically import gallery
-    // Will be created in Phase 4
-    /*
     import('./components/gallery.js').then(module => {
       module.initGallery();
     }).catch(err => console.error("Could not load gallery.js", err));
-    */
+  }
+  
+  if (pageType === 'rehabilitation') {
+    // Dynamically import carousel for the top section
+    import('./components/carousel.js').then(module => {
+      module.initCarousel();
+    }).catch(err => console.error("Could not load carousel.js", err));
   }
 });

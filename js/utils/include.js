@@ -3,11 +3,13 @@
  * Automatically detects language based on the URL.
  */
 export async function loadPartials() {
-  const isEnglish = window.location.pathname.includes('/en/');
+  const path = window.location.pathname;
+  const isEnglish = path.includes('/en/');
   const langSuffix = isEnglish ? '-en' : '-uk';
   
   // Calculate relative path to root based on path depth
-  const basePath = window.location.pathname.includes('/en/') ? '../' : './';
+  const segments = path.split('/').filter(s => s && !s.includes('.html') && s !== 'index.html');
+  const basePath = segments.length > 0 ? '../'.repeat(segments.length) : './';
 
   const headerPath = `${basePath}partials/header${langSuffix}.html`;
   const footerPath = `${basePath}partials/footer${langSuffix}.html`;
@@ -27,8 +29,14 @@ export async function loadPartials() {
     const headerContainer = document.getElementById('site-header');
     const footerContainer = document.getElementById('site-footer');
 
-    if (headerContainer) headerContainer.innerHTML = headerHtml;
-    if (footerContainer) footerContainer.innerHTML = footerHtml;
+    if (headerContainer) {
+      headerContainer.innerHTML = headerHtml;
+      adjustRelativePaths(headerContainer, basePath);
+    }
+    if (footerContainer) {
+      footerContainer.innerHTML = footerHtml;
+      adjustRelativePaths(footerContainer, basePath);
+    }
 
     // Update dynamically generated year in footer
     const yearEl = document.getElementById('current-year') || document.getElementById('current-year-en');
@@ -37,4 +45,27 @@ export async function loadPartials() {
   } catch (error) {
     console.error('Error loading partials:', error);
   }
+}
+
+/**
+ * Adjusts relative paths in a container to work from subdirectories
+ */
+function adjustRelativePaths(container, basePath) {
+  if (basePath === './') return; // Already at root
+
+  // Fix links
+  container.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('/')) {
+      link.setAttribute('href', basePath + href);
+    }
+  });
+
+  // Fix images
+  container.querySelectorAll('img[src]').forEach(img => {
+    const src = img.getAttribute('src');
+    if (src && !src.startsWith('http') && !src.startsWith('data:') && !src.startsWith('/')) {
+      img.setAttribute('src', basePath + src);
+    }
+  });
 }

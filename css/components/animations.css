@@ -1,0 +1,136 @@
+/* Scroll Animations */
+
+/* Base state: hidden and shifted */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Revealed state */
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children animation */
+.animate-on-scroll.animated .stagger-child,
+.animate-on-scroll.animated .team-member,
+.animate-on-scroll.animated .card,
+.animate-on-scroll.animated .timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggerFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays for children */
+.animate-on-scroll.animated .stagger-child:nth-child(1),
+.animate-on-scroll.animated .team-member:nth-child(1),
+.animate-on-scroll.animated .card:nth-child(1),
+.animate-on-scroll.animated .timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.animate-on-scroll.animated .stagger-child:nth-child(2),
+.animate-on-scroll.animated .team-member:nth-child(2),
+.animate-on-scroll.animated .card:nth-child(2),
+.animate-on-scroll.animated .timeline-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.animate-on-scroll.animated .stagger-child:nth-child(3),
+.animate-on-scroll.animated .team-member:nth-child(3),
+.animate-on-scroll.animated .card:nth-child(3),
+.animate-on-scroll.animated .timeline-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.animate-on-scroll.animated .stagger-child:nth-child(4),
+.animate-on-scroll.animated .team-member:nth-child(4),
+.animate-on-scroll.animated .card:nth-child(4),
+.animate-on-scroll.animated .timeline-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.animate-on-scroll.animated .stagger-child:nth-child(5),
+.animate-on-scroll.animated .timeline-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.animate-on-scroll.animated .stagger-child:nth-child(6),
+.animate-on-scroll.animated .timeline-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide from left */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-slide-left.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-slide-right.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale up */
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-scale.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation: none;
+  }
+
+  .animate-on-scroll .stagger-child,
+  .animate-on-scroll .team-member,
+  .animate-on-scroll .card,
+  .animate-on-scroll .timeline-item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

@@ -10,14 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components/buttons.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <link rel="stylesheet" href="/css/pages/activities.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/components/gallery.css">
+  <link rel="stylesheet" href="../css/pages/activities.css">
 
   <link rel="alternate" hreflang="en" href="https://www.agapeukraine.com/en/activities-retreats.html">
   <link rel="alternate" hreflang="uk" href="https://www.agapeukraine.com/activities-retreats.html">
@@ -38,7 +39,7 @@
     <section class="section">
       <div class="container animate-on-scroll">
         <div class="content-block content-image-left">
-          <img src="/assets/images/placeholder.svg" alt="Agape Retreats" class="content-img" loading="lazy">
+          <img src="../assets/images/placeholder.svg" alt="Agape Retreats" class="content-img" loading="lazy">
           <div>
             <h2>A Breath of Fresh Air</h2>
             <p class="mb-md">For many wheelchair users who spend most of their time within four walls, a retreat is a breath of fresh air. It is an opportunity to get out into nature, socialize, relax and receive essential support.</p>
@@ -64,11 +65,61 @@
           </div>
         </div>
       </div>
+    <!-- Gallery Section -->
+    <section class="section bg-light">
+      <div class="container animate-on-scroll">
+        <h2 class="text-center mb-xl">Retreat Photo Gallery</h2>
+        <div class="gallery-grid">
+          <!-- Item 1: Forest/Nature -->
+          <a href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=400&h=400" alt="Nature" loading="lazy">
+          </a>
+          <!-- Item 2: Group around fire -->
+          <a href="https://images.unsplash.com/photo-1523688523030-cfc892849cf1?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1523688523030-cfc892849cf1?auto=format&fit=crop&q=80&w=400&h=400" alt="Communication by the fire" loading="lazy">
+          </a>
+          <!-- Item 3: Outdoor meal -->
+          <a href="https://images.unsplash.com/photo-1563245330-80072b22687c?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1563245330-80072b22687c?auto=format&fit=crop&q=80&w=400&h=400" alt="Outdoor lunch" loading="lazy">
+          </a>
+          <!-- Item 4: Wheelchair accessibility -->
+          <a href="https://images.unsplash.com/photo-1581056770508-3f890f64c670?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1581056770508-3f890f64c670?auto=format&fit=crop&q=80&w=400&h=400" alt="Accessible environment" loading="lazy">
+          </a>
+          <!-- Item 5: Forest path -->
+          <a href="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=400&h=400" alt="Forest walk" loading="lazy">
+          </a>
+          <!-- Item 6: Happy group -->
+          <a href="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?auto=format&fit=crop&q=80&w=400&h=400" alt="Joy of communication" loading="lazy">
+          </a>
+          <!-- Item 7: Sunset -->
+          <a href="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=400&h=400" alt="Sunset" loading="lazy">
+          </a>
+          <!-- Item 8: Workshop/Games -->
+          <a href="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="retreats">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=400&h=400" alt="Workshop" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="section">
+      <div class="container animate-on-scroll">
+        <div class="content-block highlight-box text-center">
+          <h3>Want to join us?</h3>
+          <p class="mb-md">To sign up for the next camp, please leave a request or contact us.</p>
+          <a href="/en/contacts.html" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <div id="site-footer"></div>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>

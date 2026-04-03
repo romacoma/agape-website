@@ -75,23 +75,24 @@ export function initHeader() {
   const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
   
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href === '#') return;
+    // pathname gives the absolute path relative to the domain root
+    // e.g., if href="../index.html" and we're in /news/, pathname is "/index.html"
+    const linkPath = link.pathname;
+    if (!linkPath) return;
     
-    // if current path matches link href exactly
-    // Also handle trailing slash or exact matches
     const pathNoSlash = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath;
-    const hrefNoSlash = href.endsWith('/') ? href.slice(0, -1) : href;
+    const linkPathNoSlash = linkPath.endsWith('/') ? linkPath.slice(0, -1) : linkPath;
     
     if (
-      pathNoSlash === hrefNoSlash || 
-      (currentPath === '/' && href === '/index.html') ||
-      (currentPath === '/en/' && href === '/en/index.html')
+      pathNoSlash === linkPathNoSlash || 
+      (currentPath === '/' && (linkPath === '/index.html' || linkPath === '/')) ||
+      (currentPath === '/en/' && (linkPath === '/en/index.html' || linkPath === '/en/'))
     ) {
       link.classList.add('active');
       const dropdownParent = link.closest('.nav-item-dropdown');
       if (dropdownParent) {
-        dropdownParent.querySelector('.dropdown-toggle').classList.add('active');
+        const toggle = dropdownParent.querySelector('.dropdown-toggle');
+        if (toggle) toggle.classList.add('active');
       }
     }
   });

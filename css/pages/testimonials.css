@@ -1,5 +1,474 @@
-/* Testimonials Page Styles */
+/* ============================================
+   Testimonials Page — Before / After Stories
+   ============================================ */
 
+/* --- Page Header --- */
+.testimonials-page-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: var(--space-2xl) 0 var(--space-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-page-header::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.testimonials-page-header::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.testimonials-page-header h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-page-header .page-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  padding: var(--space-lg) 0;
+  background: var(--neutral-50);
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin-top: 4px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .stats-bar {
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+  .stat-number {
+    font-size: 1.75rem;
+  }
+}
+
+/* --- Patient Story Card --- */
+.stories-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.patient-story-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-100);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.patient-story-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* Card Inner Layout: 2 columns — photo | content */
+.story-card-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 320px;
+}
+
+/* --- Photo Column --- */
+.story-photo-col {
+  position: relative;
+  overflow: hidden;
+  background: var(--neutral-100);
+}
+
+.story-photo-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.patient-story-card:hover .story-photo-col img {
+  transform: scale(1.03);
+}
+
+/* Diagnosis badge overlaying photo */
+.diagnosis-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  background: rgba(26, 79, 143, 0.9);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* --- Content Column --- */
+.story-content-col {
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.patient-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-xs);
+}
+
+.patient-meta {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-lg);
+  font-weight: 500;
+}
+
+/* --- Quote Highlight --- */
+.story-quote {
+  background: linear-gradient(90deg, rgba(245, 123, 86, 0.12) 0%, rgba(245, 123, 86, 0.04) 100%);
+  border-left: 3px solid var(--accent);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--neutral-900);
+}
+
+.story-quote .quote-source {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--neutral-600);
+}
+
+/* --- Action Buttons Row --- */
+.story-actions {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-video {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 2px solid var(--neutral-100);
+  border-radius: var(--radius-md);
+  color: var(--neutral-900);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  font-family: var(--font-body);
+}
+
+.btn-video:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(26, 79, 143, 0.04);
+}
+
+/* Filled variant — same size as btn-video but accent background */
+.btn-video--filled {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+.btn-video--filled:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--white);
+}
+
+.btn-video svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* --- Responsive: Card Layout --- */
+@media (max-width: 900px) {
+  .story-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .story-photo-col {
+    height: 280px;
+  }
+
+  .story-content-col {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .story-photo-col {
+    height: 220px;
+  }
+
+
+
+  .story-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .story-actions .btn,
+  .story-actions .btn-video {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   Video Modal (Lightbox)
+   ============================================ */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+}
+
+.video-modal.is-active {
+  display: flex;
+}
+
+.video-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  z-index: 10;
+}
+
+.video-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- CTA Section at Bottom --- */
+.testimonials-cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: var(--space-2xl) 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.testimonials-cta-section h2 {
+  color: var(--white);
+  margin-bottom: var(--space-md);
+}
+
+.testimonials-cta-section p {
+  color: rgba(255,255,255,0.85);
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: var(--space-lg);
+  font-size: 1.1rem;
+}
+
+.testimonials-cta-section .btn-primary {
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.testimonials-cta-section .btn-primary:hover {
+  background: var(--neutral-50);
+}
+
+/* --- Pagination --- */
+.stories-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.stories-pagination .page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--neutral-100);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  color: var(--neutral-900);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  user-select: none;
+}
+
+.stories-pagination .page-btn:hover:not(.active):not(.disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(26, 79, 143, 0.04);
+}
+
+.stories-pagination .page-btn.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  pointer-events: none;
+}
+
+.stories-pagination .page-btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: default;
+}
+
+.stories-pagination .page-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  color: var(--neutral-600);
+  font-weight: 600;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* --- Legacy grid (keep for home page bento) --- */
 .testimonials-grid-all {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -29,7 +498,6 @@
   margin-bottom: var(--space-lg);
 }
 
-/* Page Specific Grid for more variety */
 @media (max-width: 992px) {
   .testimonials-grid-all {
     grid-template-columns: repeat(2, 1fr);

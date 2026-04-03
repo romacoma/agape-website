@@ -1,5 +1,101 @@
 /* About Page Styles */
 
+/* Our Story Section */
+.our-story-section {
+  background-color: var(--white);
+}
+
+.our-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 992px) {
+  .our-story-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.our-story-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.our-story-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: var(--space-sm);
+}
+
+.our-story-text p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--neutral-600);
+  margin-bottom: var(--space-md);
+}
+
+
+
+.our-story-image-col {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .our-story-image-col {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+.our-story-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.our-story-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.our-story-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 7/9;
+  object-fit: cover;
+}
+
+.our-story-image-caption {
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--neutral-600);
+  background: var(--neutral-50);
+}
+
+
 /* Mission Section */
 .mission-box {
   background: linear-gradient(135deg, var(--white) 0%, #f0f7ff 100%);
@@ -27,6 +123,17 @@
   color: var(--primary-dark);
   line-height: 1.6;
   font-style: italic;
+}
+
+.about-mission-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-mission-col .mission-box {
+  margin-top: 0;
 }
 
 /* Timeline / History */

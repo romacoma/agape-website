@@ -10,15 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components/buttons.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <link rel="stylesheet" href="/css/components/hero.css">
-  <link rel="stylesheet" href="/css/pages/about.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/components/hero.css">
+  <link rel="stylesheet" href="../css/pages/about.css">
 
   <link rel="alternate" hreflang="en" href="https://www.agapeukraine.com/en/about.html">
   <link rel="alternate" hreflang="uk" href="https://www.agapeukraine.com/about.html">
@@ -50,77 +50,167 @@
             </div>
           </div>
           <div class="about-image-col">
-            <img src="/assets/images/placeholder.svg" alt="Agape Building" class="w-100" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+            <img src="../assets/images/placeholder.svg" alt="Agape Building" class="w-100" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- History Timeline -->
-    <section class="section bg-light">
+    <!-- Our Story -->
+    <section class="section our-story-section animate-on-scroll">
+      <div class="container">
+        <div class="our-story-grid">
+          <div class="our-story-text">
+            <h2 class="our-story-heading">Our Story</h2>
+            <p>In 2001, a young family, Serhii and Nataliia Bolchuk from Lutsk, were involved in a car accident, as a result of which Nataliia broke her neck and remained paralyzed. A year and a half of wandering through hospitals and sanatoriums showed the family how difficult the life of people with disabilities is in Ukraine.</p>
+            <p>And the Lord prompted their hearts to help such people. They turned to the "Emmanuel" church with a request to start a ministry for people with disabilities, and the church supported them.</p>
+            <p>It seemed that the tragedy had ruined all plans for the future, but it was the tragedy that gave the impetus to start working with people with disabilities in Volyn. Over time, a team of young people was formed who were involved in this work. Initially, a team of people from the church organized holiday meetings for people with disabilities and their family members for acquaintance, communication, support, and social adaptation.</p>
+            <p>Later, the Bolchuk couple, together with the team, began organizing summer camps for people with disabilities and families raising children with disabilities. The team grew and began to cover both adults and children with disabilities and their families. Young people from the team began to receive education in the field of physical rehabilitation, nursing, social work, and manual therapy.</p>
+            <p>In 2007, a rehabilitation room was opened on the basis of the church premises, where the team provided rehabilitation and massage services on a voluntary basis. Later, the rehabilitation room turned into an active rehabilitation center.</p>
+            <p>In 2016, the Bolchuk couple, along with other key teams, founded the public organization "Agape Ukraine", on the basis of which the "Agape" Rehabilitation Complex began its activities.</p>
+          </div>
+          <div class="our-story-image-col">
+            <div class="our-story-image-wrapper">
+              <img src="../assets/images/main-photo-1.jpg" alt="The Bolchuk family — founders of Agape Ukraine" class="our-story-image" loading="lazy">
+              <div class="our-story-image-caption">The Bolchuk family — founders of "Agape Ukraine"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section">
       <div class="container animate-on-scroll">
-        <h2 class="text-center mb-xl">Our History</h2>
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/Z4-Px_5JeCI" 
+            title="Agape Ukraine Rehabilitation Complex Overview" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="section animate-on-scroll">
+      <div class="container text-center">
+        <h2 class="text-center mb-xl">Our Team</h2>
+        <p class="text-center text-neutral-600 mb-xl mx-auto" style="max-width: 800px; text-align: center;">Our team is the main asset of the complex. Experienced physical therapists, occupational therapists, speech therapists, psychologists, nurses, and caregivers are united by professionalism and a deep commitment to caring for people with disabilities.</p>
         
-        <div class="history-timeline">
-          <!-- 1999 -->
-          <div class="timeline-item">
-            <div class="timeline-indicator"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">1999</div>
-              <h3>First Steps</h3>
-              <p class="text-neutral-600">The history began in 1999. Then in Volyn region the first 10-day recreation camp for people with disabilities using wheelchairs was held. This camp became a catalyst for further systematic work.</p>
+        <div class="grid grid-4 gap-lg">
+          <!-- Team Member 1 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=400" alt="Vasyl Huzar" class="team-image" loading="lazy">
             </div>
+            <h4 class="team-name">Vasyl Huzar</h4>
+            <div class="team-role">Physical Therapist</div>
           </div>
           
-          <!-- 2001 -->
-          <div class="timeline-item">
-            <div class="timeline-indicator"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2001</div>
-              <h3>Mission Foundation</h3>
-              <p class="text-neutral-600">To improve the work and give it a legal and organized status, in 2001 the Volyn regional charitable mission was registered based on the church of Christians of Evangelical Faith.</p>
+          <!-- Team Member 2 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300&h=400" alt="Svitlana Koval" class="team-image" loading="lazy">
             </div>
+            <h4 class="team-name">Svitlana Koval</h4>
+            <div class="team-role">Occupational Therapist</div>
           </div>
           
-          <!-- 2005 -->
-          <div class="timeline-item">
-            <div class="timeline-indicator"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2005</div>
-              <h3>International Cooperation</h3>
-              <p class="text-neutral-600">The beginning of close cooperation with foreign partners. The first programs for the exchange of experience were introduced. Study trips were made to rehabilitation centers in Europe and North America.</p>
+          <!-- Team Member 3 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71f1e628b3?auto=format&fit=crop&q=80&w=300&h=400" alt="Nataliia Melnyk" class="team-image" loading="lazy">
             </div>
+            <h4 class="team-name">Nataliia Melnyk</h4>
+            <div class="team-role">Nurse</div>
           </div>
           
-          <!-- 2012 -->
-          <div class="timeline-item">
-            <div class="timeline-indicator"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2012</div>
-              <h3>Center Design</h3>
-              <p class="text-neutral-600">The start of designing and fundraising for the construction of a modern fully inclusive rehabilitation center in the village of Boratyn near Lutsk.</p>
+          <!-- Team Member 4 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300&h=400" alt="Oleksandr Havryliuk" class="team-image" loading="lazy">
             </div>
+            <h4 class="team-name">Oleksandr Havryliuk</h4>
+            <div class="team-role">Administration</div>
           </div>
-          
-          <!-- 2017 -->
-          <div class="timeline-item">
-            <div class="timeline-indicator"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2017</div>
-              <h3>Complex Opening</h3>
-              <p class="text-neutral-600">The opening of the Agape Ukraine rehabilitation complex, which became the largest and most modern facility of its kind in western Ukraine. Full launch of physical and occupational therapy services.</p>
+
+          <!-- Team Member 5 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=400" alt="Tetiana Savchuk" class="team-image" loading="lazy">
             </div>
+            <h4 class="team-name">Tetiana Savchuk</h4>
+            <div class="team-role">Psychologist</div>
           </div>
-          
-          <!-- Present -->
-          <div class="timeline-item">
-            <div class="timeline-indicator"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">Present Day</div>
-              <h3>Scaling Operations</h3>
-              <p class="text-neutral-600">Expansion of activities: humanitarian trips to de-occupied territories (Kherson region), operation of a wheelchair repair workshop, regular retreats, and expansion of rehabilitation services taking into account the challenges of war.</p>
+
+          <!-- Team Member 6 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=300&h=400" alt="Andrii Boiko" class="team-image" loading="lazy">
             </div>
+            <h4 class="team-name">Andrii Boiko</h4>
+            <div class="team-role">Massage Therapist</div>
           </div>
+
+          <!-- Team Member 7 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=300&h=400" alt="Olena Kravchenko" class="team-image" loading="lazy">
+            </div>
+            <h4 class="team-name">Olena Kravchenko</h4>
+            <div class="team-role">Rehabilitologist</div>
+          </div>
+
+          <!-- Team Member 8 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1550831107-155358c74e16?auto=format&fit=crop&q=80&w=300&h=400" alt="Petro Dmytruk" class="team-image" loading="lazy">
+            </div>
+            <h4 class="team-name">Petro Dmytruk</h4>
+            <div class="team-role">Speech Therapist</div>
+          </div>
+
+          <!-- Team Member 9 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1544717297-fa154da09f9b?auto=format&fit=crop&q=80&w=300&h=400" alt="Mariia Ostapchuk" class="team-image" loading="lazy">
+            </div>
+            <h4 class="team-name">Mariia Ostapchuk</h4>
+            <div class="team-role">Chaplain</div>
+          </div>
+
+          <!-- Team Member 10 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300&h=400" alt="Ihor Lysenko" class="team-image" loading="lazy">
+            </div>
+            <h4 class="team-name">Ihor Lysenko</h4>
+            <div class="team-role">Social Worker</div>
+          </div>
+
+          <!-- Team Member 11 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300&h=400" alt="Anna Solovei" class="team-image" loading="lazy">
+            </div>
+            <h4 class="team-name">Anna Solovei</h4>
+            <div class="team-role">Caregiver</div>
+          </div>
+
+          <!-- Team Member 12 -->
+          <div class="team-member">
+            <div class="team-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300&h=400" alt="Yurii Bondar" class="team-image" loading="lazy">
+            </div>
+            <h4 class="team-name">Yurii Bondar</h4>
+            <div class="team-role">Coordinator</div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-xl">
+          <a href="contacts.html" class="btn btn-outline">Contact Staff</a>
         </div>
       </div>
     </section>
@@ -132,12 +222,12 @@
         <p class="mb-lg" style="color: var(--neutral-100); max-width: 700px; margin-inline: auto; font-size: 1.125rem;">
           We function thanks to the support of benefactors. Your contribution will help us provide rehabilitation services to those who need it most.
         </p>
-        <a href="/en/contacts.html#donate" class="btn btn-primary btn-lg" style="background-color: var(--white); color: var(--primary);">Support Financially</a>
+        <a href="contacts.html#donate" class="btn btn-primary btn-lg" style="background-color: var(--white); color: var(--primary);">Support Financially</a>
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>

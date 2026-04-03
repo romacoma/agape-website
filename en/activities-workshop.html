@@ -10,14 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components/buttons.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <link rel="stylesheet" href="/css/pages/activities.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/components/gallery.css">
+  <link rel="stylesheet" href="../css/pages/activities.css">
 
   <link rel="alternate" hreflang="en" href="https://www.agapeukraine.com/en/activities-workshop.html">
   <link rel="alternate" hreflang="uk" href="https://www.agapeukraine.com/activities-workshop.html">
@@ -38,7 +39,7 @@
     <section class="section">
       <div class="container animate-on-scroll">
         <div class="content-block content-image-left">
-          <img src="/assets/images/placeholder.svg" alt="Workshop" class="content-img" loading="lazy">
+          <img src="../assets/images/placeholder.svg" alt="Workshop" class="content-img" loading="lazy">
           <div>
             <h2>Everything Must Work Perfectly</h2>
             <p class="mb-md">A wheelchair serves as the 'legs' for a person with a mobility impairment. Over time, it wears out and needs quality repair and maintenance.</p>
@@ -48,9 +49,61 @@
       </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="section bg-light pb-xl">
+      <div class="container animate-on-scroll">
+        <h2 class="text-center mb-xl">Workshop Daily Life</h2>
+        <div class="gallery-grid">
+          <!-- Item 1: Tools -->
+          <a href="https://images.unsplash.com/photo-1540103390171-184e669aba82?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1540103390171-184e669aba82?auto=format&fit=crop&q=80&w=400&h=400" alt="Tools" loading="lazy">
+          </a>
+          <!-- Item 2: Wheelchair parts -->
+          <a href="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=400&h=400" alt="Wheelchair Repair" loading="lazy">
+          </a>
+          <!-- Item 3: Workshop space -->
+          <a href="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=400&h=400" alt="Workshop" loading="lazy">
+          </a>
+          <!-- Item 4: Technical detail -->
+          <a href="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400&h=400" alt="Technical Process" loading="lazy">
+          </a>
+          <!-- Item 5: Precision work -->
+          <a href="https://images.unsplash.com/photo-1530124560676-574bc27f272c?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1530124560676-574bc27f272c?auto=format&fit=crop&q=80&w=400&h=400" alt="Precision" loading="lazy">
+          </a>
+          <!-- Item 6: Mechanical parts -->
+          <a href="https://images.unsplash.com/photo-1497502824054-94931a78cc28?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1497502824054-94931a78cc28?auto=format&fit=crop&q=80&w=400&h=400" alt="Mechanisms" loading="lazy">
+          </a>
+          <!-- Item 7: Workspace -->
+          <a href="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=400&h=400" alt="Workspace" loading="lazy">
+          </a>
+          <!-- Item 8: Help & Service -->
+          <a href="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200" class="gallery-item" data-gallery="workshop">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400&h=400" alt="Result" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="section">
+      <div class="container animate-on-scroll">
+        <div class="content-block highlight-box text-center">
+          <h3>Need help with your wheelchair?</h3>
+          <p class="mb-md">For repair or adjustment, please contact our workshop team.</p>
+          <a href="/en/contacts.html" class="btn btn-primary">Book Appointment</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="site-footer"></div>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="../js/main.js"></script>
 </body>
 </html>

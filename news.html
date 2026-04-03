@@ -8,17 +8,18 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/components/buttons.css">
-  <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/footer.css">
-  <link rel="stylesheet" href="/css/components/cards.css">
-  <link rel="stylesheet" href="/css/pages/news.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/cards.css">
+  <link rel="stylesheet" href="css/components/animations.css">
+  <link rel="stylesheet" href="css/pages/news.css">
 
   <link rel="alternate" hreflang="uk" href="https://www.agapeukraine.com/news.html">
   <link rel="alternate" hreflang="en" href="https://www.agapeukraine.com/en/news.html">
@@ -29,82 +30,74 @@
 
   <main style="padding-top: 80px;">
     <!-- Page Header -->
-    <section class="section bg-light text-center">
+    <section class="news-page-header">
       <div class="container animate-on-scroll">
-        <h1 class="mb-sm">Новини</h1>
-        <p class="text-neutral-600 mb-0" style="font-size: 1.25rem;">Життя та події нашого центру</p>
+        <h1>Новини</h1>
+        <p class="page-subtitle">Життя та події нашого центру</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container animate-on-scroll">
+    <section class="section animate-on-scroll">
+      <div class="container">
         <div class="news-grid">
           
           <!-- Featured Article -->
           <article class="card card--news news-featured">
             <div class="card__image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Головна новина" class="card__image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?fit=crop&w=960&h=540&q=80" alt="Реабілітація ветеранів" class="card__image" loading="lazy">
               <div class="card__badge">Важливо</div>
             </div>
             <div class="card__body" style="display: flex; flex-direction: column; justify-content: center;">
               <span class="card__date">14 Червня 2024</span>
               <h3 class="card__title">Запуск нової програми реабілітації для ветеранів</h3>
               <p class="card__text mb-md" style="font-size: 1.125rem;">Ми з гордістю оголошуємо про запуск розширеної програми комплексної фізичної та психологічної реабілітації для військовослужбовців, які отримали важкі поранення...</p>
-              <a href="#" class="card__link">Читати повністю &rarr;</a>
+              <a href="news/news-veterans-program.html" class="card__link">Читати повністю &rarr;</a>
             </div>
           </article>
 
           <!-- Standard Article 1 -->
           <article class="card card--news">
             <div class="card__image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Новина 1" class="card__image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?fit=crop&w=640&h=400&q=80" alt="Весняний ретрит" class="card__image" loading="lazy">
             </div>
             <div class="card__body">
               <span class="card__date">02 Травня 2024</span>
               <h3 class="card__title">Завершився весняний ретрит для людей з травмою спинного мозку</h3>
               <p class="card__text">Більше 40 учасників з різних куточків України зібралися разом для відновлення та спілкування.</p>
-              <a href="#" class="card__link">Читати повністю &rarr;</a>
+              <a href="news/news-spring-retreat.html" class="card__link">Читати повністю &rarr;</a>
             </div>
           </article>
 
           <!-- Standard Article 2 -->
           <article class="card card--news">
             <div class="card__image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Новина 2" class="card__image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?fit=crop&w=640&h=400&q=80" alt="Гуманітарна місія" class="card__image" loading="lazy">
             </div>
             <div class="card__body">
               <span class="card__date">15 Квітня 2024</span>
               <h3 class="card__title">Поїздка на Херсонщину: доставлено 5 тонн гуманітарного вантажу</h3>
               <p class="card__text">Наша команда здійснила чергову місію на деокуповані території для підтримки людей з інвалідністю.</p>
-              <a href="#" class="card__link">Читати повністю &rarr;</a>
+              <a href="news/news-kherson-mission.html" class="card__link">Читати повністю &rarr;</a>
             </div>
           </article>
 
           <!-- Standard Article 3 -->
           <article class="card card--news">
             <div class="card__image-wrapper">
-              <img src="/assets/images/placeholder.svg" alt="Новина 3" class="card__image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?fit=crop&w=640&h=400&q=80" alt="Нове обладнання" class="card__image" loading="lazy">
             </div>
             <div class="card__body">
               <span class="card__date">28 Березня 2024</span>
               <h3 class="card__title">Нове обладнання в кабінеті ерготерапії</h3>
               <p class="card__text">Завдяки нашим партнерам ми отримали сучасні тренажери для відновлення дрібної моторики рук.</p>
-              <a href="#" class="card__link">Читати повністю &rarr;</a>
+              <a href="news/news-ergotherapy-equipment.html" class="card__link">Читати повністю &rarr;</a>
             </div>
           </article>
 
         </div>
 
         <!-- Pagination -->
-        <div class="pagination">
-          <a href="#" class="page-item disabled">&laquo;</a>
-          <a href="#" class="page-item active">1</a>
-          <a href="#" class="page-item">2</a>
-          <a href="#" class="page-item">3</a>
-          <span class="page-item" style="pointer-events: none; border-color: transparent;">...</span>
-          <a href="#" class="page-item">10</a>
-          <a href="#" class="page-item">&raquo;</a>
-        </div>
+        <div class="pagination" id="newsPagination"></div>
 
       </div>
     </section>
@@ -112,6 +105,51 @@
   </main>
 
   <div id="site-footer"></div>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const PER_PAGE = 4;
+      const allCards = document.querySelectorAll('.news-grid .card--news');
+      const paginationEl = document.getElementById('newsPagination');
+      const totalPages = Math.ceil(allCards.length / PER_PAGE);
+      let currentPage = 1;
+
+      function showPage(page) {
+        currentPage = page;
+        const start = (page - 1) * PER_PAGE;
+        const end = start + PER_PAGE;
+        allCards.forEach((card, i) => {
+          card.style.display = (i >= start && i < end) ? '' : 'none';
+        });
+        renderPagination();
+        document.querySelector('.news-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function renderPagination() {
+        if (totalPages <= 1) { paginationEl.innerHTML = ''; return; }
+        let html = `<a class="page-item ${currentPage === 1 ? 'disabled' : ''}" data-page="prev">&laquo;</a>`;
+        for (let p = 1; p <= totalPages; p++) {
+          if (p === 1 || p === totalPages || (p >= currentPage - 1 && p <= currentPage + 1)) {
+            html += `<a class="page-item ${p === currentPage ? 'active' : ''}" data-page="${p}">${p}</a>`;
+          } else if (p === currentPage - 2 || p === currentPage + 2) {
+            html += `<span class="page-item" style="pointer-events:none;border-color:transparent;">…</span>`;
+          }
+        }
+        html += `<a class="page-item ${currentPage === totalPages ? 'disabled' : ''}" data-page="next">&raquo;</a>`;
+        paginationEl.innerHTML = html;
+        paginationEl.querySelectorAll('.page-item[data-page]').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const val = btn.dataset.page;
+            if (val === 'prev') showPage(currentPage - 1);
+            else if (val === 'next') showPage(currentPage + 1);
+            else showPage(parseInt(val));
+          });
+        });
+      }
+
+      showPage(1);
+    });
+  </script>
 </body>
 </html>
