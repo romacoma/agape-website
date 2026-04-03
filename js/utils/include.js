@@ -7,9 +7,9 @@ export async function loadPartials() {
   const isEnglish = path.includes('/en/');
   const langSuffix = isEnglish ? '-en' : '-uk';
   
-  // Calculate relative path to root based on path depth
-  const segments = path.split('/').filter(s => s && !s.includes('.html') && s !== 'index.html');
-  const basePath = segments.length > 0 ? '../'.repeat(segments.length) : './';
+  // Detect depth relative to site root (ignoring potentially repo names on GitHub Pages)
+  const isSubFolder = path.includes('/en/');
+  const basePath = isSubFolder ? '../' : './';
 
   const headerPath = `${basePath}partials/header${langSuffix}.html`;
   const footerPath = `${basePath}partials/footer${langSuffix}.html`;
