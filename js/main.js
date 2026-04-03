@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     */
   }
   
-  if (pageType === 'rehabilitation' || pageType === 'activities' || pageType === 'gallery') {
+  if (pageType === 'rehabilitation' || pageType === 'activities' || pageType === 'activities-sub' || pageType === 'gallery') {
     // Dynamically import gallery
     import('./components/gallery.js').then(module => {
       module.initGallery();
