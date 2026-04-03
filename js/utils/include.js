@@ -7,14 +7,8 @@ export async function loadPartials() {
   const isEnglish = path.includes('/en/');
   const langSuffix = isEnglish ? '-en' : '-uk';
   
-  // Universal depth detection for GitHub Pages and subdirectories
-  const pathParts = path.split('/').filter(p => !p.includes('.html') && p !== '');
-  
-  // On GitHub Pages (username.github.io/repo/), the first part is the repo name.
-  const isGithubPages = window.location.hostname.endsWith('.github.io');
-  const rootDepth = isGithubPages ? 1 : 0;
-  const currentDepth = pathParts.length - rootDepth;
-  
+  // Simple depth detection to work everywhere (Local, GitHub, etc.)
+  const currentDepth = isEnglish ? 1 : 0;
   const basePath = currentDepth > 0 ? '../'.repeat(currentDepth) : './';
 
   const headerPath = `${basePath}partials/header${langSuffix}.html`;
